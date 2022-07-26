@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>github.io on Jae&#39;s Devlog</title>
-        <link>https://JaeKimdev.github.io/tags/github.io/</link>
-        <description>Recent content in github.io on Jae&#39;s Devlog</description>
+        <title>Tech on Jae&#39;s Devlog</title>
+        <link>https://JaeKimdev.github.io/categories/tech/</link>
+        <description>Recent content in Tech on Jae&#39;s Devlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 26 Jul 2022 19:39:02 +0800</lastBuildDate><atom:link href="https://JaeKimdev.github.io/tags/github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test</title>
-        <link>https://JaeKimdev.github.io/p/test/</link>
-        <pubDate>Tue, 26 Jul 2022 19:39:02 +0800</pubDate>
-        
-        <guid>https://JaeKimdev.github.io/p/test/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Tue, 26 Jul 2022 15:22:52 +0800</lastBuildDate><atom:link href="https://JaeKimdev.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hugo로 github.io 기술 블로그 만들기(1)</title>
         <link>https://JaeKimdev.github.io/p/hugo%EB%A1%9C-github.io-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B01/</link>
         <pubDate>Tue, 26 Jul 2022 15:22:52 +0800</pubDate>

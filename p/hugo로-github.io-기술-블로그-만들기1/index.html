@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='개발 공부를 시작하면서부터 기술블로그를 쓰면 좋다는 이야기를 들었지만, 어디서부터 어떻게 해야 할지 몰라서 github.io 페이지를 만들고 Jekyll을 이용해서 블로그를 만들어 놓기만 한 채 방치하고 있었다.
+'><title>Hugo로 github.io 기술 블로그 만들기(1)</title>
+
+<link rel='canonical' href='https://JaeKimdev.github.io/p/hugo%EB%A1%9C-github.io-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B01/'>
+
+<link rel="stylesheet" href="/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css"><meta property='og:title' content='Hugo로 github.io 기술 블로그 만들기(1)'>
+<meta property='og:description' content='개발 공부를 시작하면서부터 기술블로그를 쓰면 좋다는 이야기를 들었지만, 어디서부터 어떻게 해야 할지 몰라서 github.io 페이지를 만들고 Jekyll을 이용해서 블로그를 만들어 놓기만 한 채 방치하고 있었다.
+'>
+<meta property='og:url' content='https://JaeKimdev.github.io/p/hugo%EB%A1%9C-github.io-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B01/'>
+<meta property='og:site_name' content='Jae&#39;s Devlog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='devlog' /><meta property='article:tag' content='github.io' /><meta property='article:published_time' content='2022-07-26T15:22:52&#43;08:00'/><meta property='article:modified_time' content='2022-07-26T15:22:52&#43;08:00'/>
+<meta name="twitter:title" content="Hugo로 github.io 기술 블로그 만들기(1)">
+<meta name="twitter:description" content="개발 공부를 시작하면서부터 기술블로그를 쓰면 좋다는 이야기를 들었지만, 어디서부터 어떻게 해야 할지 몰라서 github.io 페이지를 만들고 Jekyll을 이용해서 블로그를 만들어 놓기만 한 채 방치하고 있었다.
+">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-198007055-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu1b1180e7914ae150b55882621382cc86_94014_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">📱</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Jae&#39;s Devlog</a></h1>
+            <h2 class="site-description">iOS, Swift, Etc</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/JaeKimDev'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/jae-hyung-kim-7067717b/'
+                        target="_blank"
+                        title="Linked.in"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="4" y="4" width="16" height="16" rx="2" />
+  <line x1="8" y1="11" x2="8" y2="16" />
+  <line x1="8" y1="8" x2="8" y2="8.01" />
+  <line x1="12" y1="16" x2="12" y2="11" />
+  <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+            <a href="/categories/blog/" >
+                blog
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/hugo%EB%A1%9C-github.io-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B01/">Hugo로 github.io 기술 블로그 만들기(1)</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">26 Jul, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>개발 공부를 시작하면서부터 기술블로그를 쓰면 좋다는 이야기를 들었지만, 어디서부터 어떻게 해야 할지 몰라서 github.io 페이지를 만들고 Jekyll을 이용해서 블로그를 만들어 놓기만 한 채 방치하고 있었다.</p>
+<p>iOS 공부를 시작하면서 공부한 것 정리용으로, 또 나중에 찾아볼 수 있도록 기록하면 좋겠다 싶어서 찾아보니 Jekyll은 컨텐츠가 쌓일수록 빌드 속도가 엄청 늦어진다는 글을 읽어서 새롭게 hugo를 사용해 보기로 했다.</p>
+<p>마침 야곰 아카데미 코드 스타터 5주 과정이 끝나서 리뷰를 써야겠다고 마음먹고 시작!</p>
+<h2 id="0-목차">0. 목차</h2>
+<p><a class="link" href="#1-hugo-%ec%84%a4%ec%b9%98" >1. Hugo 설치</a><br>
+<a class="link" href="#2-github-%eb%a0%88%ed%8f%ac%ec%a7%80%ed%86%a0%eb%a6%ac-%ec%83%9d%ec%84%b1" >2. Github 레포지토리 생성</a><br>
+<a class="link" href="#3-hugo-%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%eb%a7%8c%eb%93%a4%ea%b8%b0" >3. Hugo 프로젝트 만들기</a><br>
+<a class="link" href="#4-github-%eb%a0%88%ed%8f%ac%ec%a7%80%ed%86%a0%eb%a6%ac-%ec%97%b0%ea%b2%b0" >4. github 레포지토리 연결</a><br>
+<a class="link" href="#reference" >5. Reference</a></p>
+<h2 id="1-hugo-설치">1. Hugo 설치</h2>
+<ul>
+<li>HomeBrew가 설치되어 있어야 한다.
+<a class="link" href="https://brew.sh/"  target="_blank" rel="noopener"
+    >여기</a> 화면 중앙의 <code>Install Homebrew</code>하단의 코드를 복사해서 터미널에서 실행</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># hugo 설치
+</span></span><span class="line"><span class="cl">$ brew install hugo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># hugo 버전 확인
+</span></span><span class="line"><span class="cl">$ hugo version
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 설치가 되어 있다면 버전이 출력된다.
+</span></span><span class="line"><span class="cl">hugo v0.101.0+extended darwin/amd64 BuildDate=unknown
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2-github-레포지토리-생성">2. Github 레포지토리 생성</h2>
+<p><code>blog</code> 라는 이름의 레포지토리와
+<code>&lt;username&gt;.github.io</code> 자기아이디 이름의 github.io 레포지토리를 생성해 준다</p>
+<p><img src="https://github.com/JaeKimdev/TIL/blob/main/etc/images/blog/220726-4.png?raw=true"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="3-hugo-프로젝트-만들기">3. Hugo 프로젝트 만들기</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># hugo 프로젝트 생성
+</span></span><span class="line"><span class="cl">$ hugo new site blog
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 생성 완료되면 출력 문구
+</span></span><span class="line"><span class="cl">Congratulations! Your new Hugo site is created in /Users/user/Workspaces/blog.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Just a few more steps and you&#39;re ready to go:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. Download a theme into the same-named folder.
+</span></span><span class="line"><span class="cl">   Choose a theme from https://themes.gohugo.io/ or
+</span></span><span class="line"><span class="cl">   create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command.
+</span></span><span class="line"><span class="cl">2. Perhaps you want to add some content. You can add single files
+</span></span><span class="line"><span class="cl">   with &#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
+</span></span><span class="line"><span class="cl">3. Start the built-in live server via &#34;hugo server&#34;.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Visit https://gohugo.io/ for quickstart guide and full documentation.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>테마는 <a class="link" href="https://themes.gohugo.io/"  target="_blank" rel="noopener"
+    >여기</a> 에서 확인하고 고를 수 있는데, 나는 <code>gurumee92</code>님이 설치한 <code>hugo-tranquilpeak-theme</code>을 따라서 설치하였다. 뭣도 모르니까&hellip;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-v" data-lang="v"><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">blog</span> <span class="nv">폴더로</span> <span class="nv">이동</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">cd</span> <span class="nv">blog</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">프로젝트</span> <span class="nv">루트</span> <span class="nv">경로</span> <span class="nv">확인</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">pwd</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="nc">Users</span><span class="o">/</span><span class="nv">smfc</span><span class="o">/</span><span class="nc">Dev</span><span class="o">/</span><span class="nv">blog</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">git</span> <span class="nv">초기화</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">git</span> <span class="nv">init</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">브렌치를</span> <span class="nv">main으로</span> <span class="nv">변경</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">git</span> <span class="nv">branch</span> <span class="o">-</span><span class="nc">M</span> <span class="nv">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="nv">https</span><span class="p">:</span><span class="c1">//github.com/&lt;theme 경로&gt;.git themes/&lt;theme 이름&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">$</span> <span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="nv">https</span><span class="p">:</span><span class="c1">//github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">테마</span> <span class="nv">폴더</span> <span class="nv">안의</span> <span class="sc">`config.toml`</span> <span class="nv">파일을</span> <span class="nv">blog</span> <span class="nv">폴더</span> <span class="nv">하단으로</span> <span class="nv">복사</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="nv">cp</span> <span class="nv">themes</span><span class="o">/</span><span class="nv">hugo</span><span class="o">-</span><span class="nv">tranquilpeak</span><span class="o">-</span><span class="nv">theme</span><span class="o">/</span><span class="nv">exampleSite</span><span class="o">/</span><span class="nv">config</span><span class="p">.</span><span class="nv">toml</span> <span class="nv">config</span><span class="p">.</span><span class="nv">toml</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>그후 blog 폴더 하단의 <code>config.toml</code> 파일을 열어서 수정해준다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 이 부분 baseURL을 자신의 github.io 주소로 수정
+</span></span><span class="line"><span class="cl">baseURL = &#34;https://jaekimdev.github.io/&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 블로그 상단에 노출되는 이름 수정
+</span></span><span class="line"><span class="cl">title = &#34;Jae&#39;s Devlog&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>저장 후 터미널에서 hugo 서버 실행</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ hugo server
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Start building sites …
+</span></span><span class="line"><span class="cl">hugo v0.101.0+extended darwin/amd64 BuildDate=unknown
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                   | EN-US
+</span></span><span class="line"><span class="cl">-------------------+--------
+</span></span><span class="line"><span class="cl">  Pages            |     9
+</span></span><span class="line"><span class="cl">  Paginator pages  |     0
+</span></span><span class="line"><span class="cl">  Non-page files   |     0
+</span></span><span class="line"><span class="cl">  Static files     |     4
+</span></span><span class="line"><span class="cl">  Processed images |     0
+</span></span><span class="line"><span class="cl">  Aliases          |     1
+</span></span><span class="line"><span class="cl">  Sitemaps         |     1
+</span></span><span class="line"><span class="cl">  Cleaned          |     0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Built in 9 ms
+</span></span><span class="line"><span class="cl">Watching for changes in /Users/smfc/Dev/blog/{archetypes,content,data,layouts,static,themes}
+</span></span><span class="line"><span class="cl">Watching for config changes in /Users/smfc/Dev/blog/config.toml
+</span></span><span class="line"><span class="cl">Environment: &#34;development&#34;
+</span></span><span class="line"><span class="cl">Serving pages from memory
+</span></span><span class="line"><span class="cl">Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+</span></span><span class="line"><span class="cl">Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+</span></span><span class="line"><span class="cl">Press Ctrl+C to stop
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>브라우저를 열어서 <code>http://localhost:1313/</code>로 접속하면 블로그 화면을 볼 수 있다.</p>
+<!-- raw HTML omitted -->
+<h2 id="4-github-레포지토리-연결">4. github 레포지토리 연결</h2>
+<p><code>blog</code>에 <code>blog</code> 레포지토리를, <code>blog/public</code>에 <code>&lt;username&gt;.github.io</code> 레포지토리를 연결한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-v" data-lang="v"><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">blog</span> <span class="o">-</span><span class="p">&gt;</span> <span class="nv">blog</span> <span class="nv">레포지토리</span> <span class="nv">연결</span>
+</span></span><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">git</span> <span class="nv">remote</span> <span class="nv">add</span> <span class="nv">origin</span> <span class="nv">http</span><span class="p">:</span><span class="c1">//github.com/&lt;username&gt;/blog.git
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">$</span> <span class="nv">git</span> <span class="nv">remote</span> <span class="nv">add</span> <span class="nv">origin</span> <span class="nv">https</span><span class="p">:</span><span class="c1">//github.com/jaekimdev/blog.git
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">blog</span><span class="o">/</span><span class="nv">public</span> <span class="o">-</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nv">username</span><span class="p">&gt;.</span><span class="nv">github</span><span class="p">.</span><span class="nv">io</span> <span class="nv">연결</span>
+</span></span><span class="line"><span class="cl"><span class="o">#</span> <span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="o">-</span><span class="nv">b</span> <span class="nv">main</span> <span class="nv">http</span><span class="p">:</span><span class="c1">//github.com/&lt;username&gt;/&lt;username&gt;.github.io.git public
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">$</span> <span class="nv">git</span> <span class="nv">submodule</span> <span class="nv">add</span> <span class="o">-</span><span class="nv">b</span> <span class="nv">main</span> <span class="nv">http</span><span class="p">:</span><span class="c1">//github.com/jaekimdev/jaekimdev.github.io.git public
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>‼️ <!-- raw HTML omitted -->public이 이미 존재한다는 에러 메세지가 보여지고 진행되지 않음.<!-- raw HTML omitted --> ➡️ <!-- raw HTML omitted -->blog 폴더 하단의 public 폴더를 지운 후에 명령어 실행<!-- raw HTML omitted --></p>
+<p>배포를 쉽게 하기 위해 blog 폴더 하단에 &lsquo;deploy.sh&rsquo; 파일을 만들어 준다 - 나는 <code>config.toml</code> 파일을 복사한 후 이름을 변경해 주고 아래 내용을 붙여넣기 한 후 저장하였다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Build the project.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># hugo -t &lt;여러분의 테마&gt;</span>
+</span></span><span class="line"><span class="cl">hugo -t hugo-tranquilpeak-theme
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Go To Public folder, sub module commit</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl"><span class="c1"># Add changes to git.</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Commit changes.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Push source and build repos.</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Come Back up to the Project Root</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># blog 저장소 Commit &amp; Push</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>터미널에서 sh파일에 권한을 주고 실행한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># deploy.sh 실행 파일 권한 부여
+</span></span><span class="line"><span class="cl">$ chmod 777 deploy.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 배포 실행
+</span></span><span class="line"><span class="cl">$ ./deploy.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="https://github.com/JaeKimdev/TIL/blob/main/etc/images/blog/220726-1.png?raw=true"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>‼️ <!-- raw HTML omitted -->나는 이 부분에서 오류 발생!<!-- raw HTML omitted --> ➡️ <!-- raw HTML omitted -->오류메세지에서 안내해 주는대로 <code>git fetch</code> 먼저 해주고 <code>./deploy.sh</code> 재실행 <!-- raw HTML omitted --></p>
+<p><img src="https://github.com/JaeKimdev/TIL/blob/main/etc/images/blog/220726-2.png?raw=true"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>‼️ <!-- raw HTML omitted -->또다시 오류 발생!<!-- raw HTML omitted --> ➡️ <!-- raw HTML omitted -->오류메세지에서 안내해 주는대로 <code>git pull</code> 실행하고 <code>git branch --set-upstream-to=origin/main</code>실행한 후 <code>./deploy.sh</code> 재실행 <!-- raw HTML omitted --></p>
+<p><img src="https://github.com/JaeKimdev/TIL/blob/main/etc/images/blog/220726-3.png?raw=true"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>‼️ <!-- raw HTML omitted -->또다시 오류 발생!<!-- raw HTML omitted --> ➡️ <!-- raw HTML omitted -->오류메세지에서 안내해 주는대로 <code>git pull</code> 실행하고 <code>./deploy.sh</code> 재실행 <!-- raw HTML omitted --></p>
+<p>내가 찾아본 블로그들에서는 이 부분을 알려주는 곳이 없어서 엄청 오랫동안 만들고 지우고를 반복;;</p>
+<p>이젠 다 해결되어 <code>https://&lt;username&gt;.github.io</code>로 접속해서 블로그를 볼 수 있다!!! 🎉</p>
+<h2 id="reference">Reference</h2>
+<p><a class="link" href="https://velog.io/@mellonggo/Github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Hugo"  target="_blank" rel="noopener"
+    >Github 페이지 블로그 만들기 (with Hugo)</a><br>
+<a class="link" href="https://gurumee92.github.io/2020/08/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0-1-hugo-github%EC%9C%BC%EB%A1%9C-%EA%B0%9C%EC%9D%B8-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/"  target="_blank" rel="noopener"
+    >블로그 구축기 (1) Hugo + Github으로 개인 블로그 만들기</a><br>
+<a class="link" href="https://github.com/Integerous/Integerous.github.io"  target="_blank" rel="noopener"
+    >Hugo로 Github.io 블로그 만들기</a></p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">hugo</a>
+        
+            <a href="/tags/devlog/">devlog</a>
+        
+            <a href="/tags/github.io/">github.io</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/test/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Test</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="JaeKimdev/blog-comments"
+        issue-term="titlepathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 Jae&#39;s Devlog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.12.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#0-목차">0. 목차</a></li>
+    <li><a href="#1-hugo-설치">1. Hugo 설치</a></li>
+    <li><a href="#2-github-레포지토리-생성">2. Github 레포지토리 생성</a></li>
+    <li><a href="#3-hugo-프로젝트-만들기">3. Hugo 프로젝트 만들기</a></li>
+    <li><a href="#4-github-레포지토리-연결">4. github 레포지토리 연결</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
