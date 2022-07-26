@@ -370,12 +370,14 @@
 &lt;p&gt;내가 찾아본 블로그들에서는 이 부분을 알려주는 곳이 없어서 엄청 오랫동안 만들고 지우고를 반복;;&lt;/p&gt;
 &lt;p&gt;이젠 다 해결되어 &lt;code&gt;https://&amp;lt;username&amp;gt;.github.io&lt;/code&gt;로 접속해서 블로그를 볼 수 있다!!! 🎉&lt;/p&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://velog.io/@mellonggo/Github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Hugo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Github 페이지 블로그 만들기 (with Hugo)&lt;/a&gt;&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://gurumee92.github.io/2020/08/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0-1-hugo-github%EC%9C%BC%EB%A1%9C-%EA%B0%9C%EC%9D%B8-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;블로그 구축기 (1) Hugo + Github으로 개인 블로그 만들기&lt;/a&gt;&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/Integerous/Integerous.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo로 Github.io 블로그 만들기&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://velog.io/@mellonggo/Github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Hugo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github 페이지 블로그 만들기 (with Hugo)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gurumee92.github.io/2020/08/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0-1-hugo-github%EC%9C%BC%EB%A1%9C-%EA%B0%9C%EC%9D%B8-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;블로그 구축기 (1) Hugo + Github으로 개인 블로그 만들기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Integerous/Integerous.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo로 Github.io 블로그 만들기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
