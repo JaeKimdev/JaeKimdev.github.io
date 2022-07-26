@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on Hugo tranquilpeak theme</title>
-    <link>https://JaeKimdev.github.io/tags/</link>
-    <description>Recent content in Tags on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://JaeKimdev.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+    <channel>
+        <title>Tags on Jae&#39;s Devlog</title>
+        <link>https://JaeKimdev.github.io/tags/</link>
+        <description>Recent content in Tags on Jae&#39;s Devlog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 26 Jul 2022 19:39:02 +0800</lastBuildDate><atom:link href="https://JaeKimdev.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>devlog</title>
+        <link>https://JaeKimdev.github.io/tags/devlog/</link>
+        <pubDate>Tue, 26 Jul 2022 19:39:02 +0800</pubDate>
+        
+        <guid>https://JaeKimdev.github.io/tags/devlog/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>github.io</title>
+        <link>https://JaeKimdev.github.io/tags/github.io/</link>
+        <pubDate>Tue, 26 Jul 2022 19:39:02 +0800</pubDate>
+        
+        <guid>https://JaeKimdev.github.io/tags/github.io/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>hugo</title>
+        <link>https://JaeKimdev.github.io/tags/hugo/</link>
+        <pubDate>Tue, 26 Jul 2022 19:39:02 +0800</pubDate>
+        
+        <guid>https://JaeKimdev.github.io/tags/hugo/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
 </rss>

@@ -2,12 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://JaeKimdev.github.io/archives/</loc>
+    <loc>https://JaeKimdev.github.io/categories/blog/</loc>
+    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
   </url><url>
     <loc>https://JaeKimdev.github.io/categories/</loc>
+    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/tags/devlog/</loc>
+    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/tags/github.io/</loc>
+    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/tags/hugo/</loc>
+    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
   </url><url>
     <loc>https://JaeKimdev.github.io/</loc>
+    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/post/</loc>
+    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
   </url><url>
     <loc>https://JaeKimdev.github.io/tags/</loc>
+    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/p/test/</loc>
+    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
   </url>
 </urlset>
