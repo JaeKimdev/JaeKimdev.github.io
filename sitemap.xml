@@ -2,37 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://JaeKimdev.github.io/</loc>
+    <lastmod>2022-07-26T15:22:52+08:00</lastmod>
+  </url><url>
     <loc>https://JaeKimdev.github.io/categories/blog/</loc>
-    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
+    <lastmod>2022-07-26T15:22:52+08:00</lastmod>
   </url><url>
     <loc>https://JaeKimdev.github.io/categories/</loc>
-    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
+    <lastmod>2022-07-26T15:22:52+08:00</lastmod>
   </url><url>
     <loc>https://JaeKimdev.github.io/tags/devlog/</loc>
-    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
+    <lastmod>2022-07-26T15:22:52+08:00</lastmod>
   </url><url>
     <loc>https://JaeKimdev.github.io/tags/github.io/</loc>
-    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
+    <lastmod>2022-07-26T15:22:52+08:00</lastmod>
   </url><url>
     <loc>https://JaeKimdev.github.io/tags/hugo/</loc>
-    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
-  </url><url>
-    <loc>https://JaeKimdev.github.io/</loc>
-    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
-  </url><url>
-    <loc>https://JaeKimdev.github.io/post/</loc>
-    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
-  </url><url>
-    <loc>https://JaeKimdev.github.io/tags/</loc>
-    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
-  </url><url>
-    <loc>https://JaeKimdev.github.io/p/test/</loc>
-    <lastmod>2022-07-26T19:39:02+08:00</lastmod>
+    <lastmod>2022-07-26T15:22:52+08:00</lastmod>
   </url><url>
     <loc>https://JaeKimdev.github.io/p/hugo%EB%A1%9C-github.io-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B01/</loc>
     <lastmod>2022-07-26T15:22:52+08:00</lastmod>
   </url><url>
-    <loc>https://JaeKimdev.github.io/categories/tech/</loc>
+    <loc>https://JaeKimdev.github.io/post/</loc>
     <lastmod>2022-07-26T15:22:52+08:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/tags/</loc>
+    <lastmod>2022-07-26T15:22:52+08:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/p/hugo-blog-%ED%85%8C%EC%8A%A4%ED%8A%B8/</loc>
+    <lastmod>2022-07-26T11:06:26+08:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/categories/tech/</loc>
+    <lastmod>2022-07-26T11:06:26+08:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/page/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/about/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/links/</loc>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/search/</loc>
+  </url><url>
+    <loc>https://JaeKimdev.github.io/categories/test/</loc>
   </url>
 </urlset>

@@ -2,19 +2,25 @@
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='개발 공부를 시작하면서부터 기술블로그를 쓰면 좋다는 이야기를 들었지만, 어디서부터 어떻게 해야 할지 몰라서 github.io 페이지를 만들고 Jekyll을 이용해서 블로그를 만들어 놓기만 한 채 방치하고 있었다.
-'><title>Hugo로 github.io 기술 블로그 만들기(1)</title>
+iOS 공부를 시작하면서 공부한 것 정리용으로, 또 나중에 찾아볼 수 있도록 기록하면 좋겠다 싶어서 찾아보니 Jekyll은 컨텐츠가 쌓일수록 빌드 속도가 엄청 늦어진다는 글을 읽어서 새롭게 hugo를 사용해 보기로 했다.
+마침 야곰 아카데미 코드 스타터 5주 과정이 끝나서 리뷰를 써야겠다고 마음먹고 시작!
+Hugo 설치 HomeBrew가 설치되어 있어야 한다.'><title>Hugo로 github.io 기술 블로그 만들기(1)</title>
 
 <link rel='canonical' href='https://JaeKimdev.github.io/p/hugo%EB%A1%9C-github.io-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B01/'>
 
 <link rel="stylesheet" href="/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css"><meta property='og:title' content='Hugo로 github.io 기술 블로그 만들기(1)'>
 <meta property='og:description' content='개발 공부를 시작하면서부터 기술블로그를 쓰면 좋다는 이야기를 들었지만, 어디서부터 어떻게 해야 할지 몰라서 github.io 페이지를 만들고 Jekyll을 이용해서 블로그를 만들어 놓기만 한 채 방치하고 있었다.
-'>
+iOS 공부를 시작하면서 공부한 것 정리용으로, 또 나중에 찾아볼 수 있도록 기록하면 좋겠다 싶어서 찾아보니 Jekyll은 컨텐츠가 쌓일수록 빌드 속도가 엄청 늦어진다는 글을 읽어서 새롭게 hugo를 사용해 보기로 했다.
+마침 야곰 아카데미 코드 스타터 5주 과정이 끝나서 리뷰를 써야겠다고 마음먹고 시작!
+Hugo 설치 HomeBrew가 설치되어 있어야 한다.'>
 <meta property='og:url' content='https://JaeKimdev.github.io/p/hugo%EB%A1%9C-github.io-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B01/'>
 <meta property='og:site_name' content='Jae&#39;s Devlog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='devlog' /><meta property='article:tag' content='github.io' /><meta property='article:published_time' content='2022-07-26T15:22:52&#43;08:00'/><meta property='article:modified_time' content='2022-07-26T15:22:52&#43;08:00'/>
 <meta name="twitter:title" content="Hugo로 github.io 기술 블로그 만들기(1)">
 <meta name="twitter:description" content="개발 공부를 시작하면서부터 기술블로그를 쓰면 좋다는 이야기를 들었지만, 어디서부터 어떻게 해야 할지 몰라서 github.io 페이지를 만들고 Jekyll을 이용해서 블로그를 만들어 놓기만 한 채 방치하고 있었다.
-">
+iOS 공부를 시작하면서 공부한 것 정리용으로, 또 나중에 찾아볼 수 있도록 기록하면 좋겠다 싶어서 찾아보니 Jekyll은 컨텐츠가 쌓일수록 빌드 속도가 엄청 늦어진다는 글을 읽어서 새롭게 hugo를 사용해 보기로 했다.
+마침 야곰 아카데미 코드 스타터 5주 과정이 끝나서 리뷰를 써야겠다고 마음먹고 시작!
+Hugo 설치 HomeBrew가 설치되어 있어야 한다.">
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -130,6 +136,108 @@ if (!doNotTrack) {
         </ol><ol class="menu" id="main-menu">
         
         
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
 
         <div class="menu-bottom-section">
             
@@ -164,10 +272,6 @@ if (!doNotTrack) {
     <div class="article-details">
     
     <header class="article-category">
-        
-            <a href="/categories/tech/" >
-                Tech
-            </a>
         
             <a href="/categories/blog/" >
                 blog
@@ -212,7 +316,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    5 minute read
+                    4 minute read
                 </time>
             </div>
         
@@ -229,13 +333,7 @@ if (!doNotTrack) {
     <p>개발 공부를 시작하면서부터 기술블로그를 쓰면 좋다는 이야기를 들었지만, 어디서부터 어떻게 해야 할지 몰라서 github.io 페이지를 만들고 Jekyll을 이용해서 블로그를 만들어 놓기만 한 채 방치하고 있었다.</p>
 <p>iOS 공부를 시작하면서 공부한 것 정리용으로, 또 나중에 찾아볼 수 있도록 기록하면 좋겠다 싶어서 찾아보니 Jekyll은 컨텐츠가 쌓일수록 빌드 속도가 엄청 늦어진다는 글을 읽어서 새롭게 hugo를 사용해 보기로 했다.</p>
 <p>마침 야곰 아카데미 코드 스타터 5주 과정이 끝나서 리뷰를 써야겠다고 마음먹고 시작!</p>
-<h2 id="0-목차">0. 목차</h2>
-<p><a class="link" href="#1-hugo-%ec%84%a4%ec%b9%98" >1. Hugo 설치</a><br>
-<a class="link" href="#2-github-%eb%a0%88%ed%8f%ac%ec%a7%80%ed%86%a0%eb%a6%ac-%ec%83%9d%ec%84%b1" >2. Github 레포지토리 생성</a><br>
-<a class="link" href="#3-hugo-%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%eb%a7%8c%eb%93%a4%ea%b8%b0" >3. Hugo 프로젝트 만들기</a><br>
-<a class="link" href="#4-github-%eb%a0%88%ed%8f%ac%ec%a7%80%ed%86%a0%eb%a6%ac-%ec%97%b0%ea%b2%b0" >4. github 레포지토리 연결</a><br>
-<a class="link" href="#reference" >5. Reference</a></p>
-<h2 id="1-hugo-설치">1. Hugo 설치</h2>
+<h2 id="hugo-설치">Hugo 설치</h2>
 <ul>
 <li>HomeBrew가 설치되어 있어야 한다.
 <a class="link" href="https://brew.sh/"  target="_blank" rel="noopener"
@@ -263,7 +361,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">hugo v0.101.0+extended darwin/amd64 BuildDate=unknown
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="2-github-레포지토리-생성">2. Github 레포지토리 생성</h2>
+</div><h2 id="github-레포지토리-생성">Github 레포지토리 생성</h2>
 <p><code>blog</code> 라는 이름의 레포지토리와
 <code>&lt;username&gt;.github.io</code> 자기아이디 이름의 github.io 레포지토리를 생성해 준다</p>
 <p><img src="https://github.com/JaeKimdev/TIL/blob/main/etc/images/blog/220726-4.png?raw=true"
@@ -276,7 +374,7 @@ if (!doNotTrack) {
 	
 	
 ></p>
-<h2 id="3-hugo-프로젝트-만들기">3. Hugo 프로젝트 만들기</h2>
+<h2 id="hugo-프로젝트-만들기">Hugo 프로젝트 만들기</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -433,7 +531,7 @@ if (!doNotTrack) {
 </div>
 </div><p>브라우저를 열어서 <code>http://localhost:1313/</code>로 접속하면 블로그 화면을 볼 수 있다.</p>
 <!-- raw HTML omitted -->
-<h2 id="4-github-레포지토리-연결">4. github 레포지토리 연결</h2>
+<h2 id="github-레포지토리-연결">github 레포지토리 연결</h2>
 <p><code>blog</code>에 <code>blog</code> 레포지토리를, <code>blog/public</code>에 <code>&lt;username&gt;.github.io</code> 레포지토리를 연결한다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -596,6 +694,7 @@ if (!doNotTrack) {
     >블로그 구축기 (1) Hugo + Github으로 개인 블로그 만들기</a><br>
 <a class="link" href="https://github.com/Integerous/Integerous.github.io"  target="_blank" rel="noopener"
     >Hugo로 Github.io 블로그 만들기</a></p>
+
 </section>
 
 
@@ -641,12 +740,12 @@ if (!doNotTrack) {
             
                 
 <article class="">
-    <a href="/p/test/">
+    <a href="/p/hugo-blog-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Test</h2>
+            <h2 class="article-title">Hugo Blog 테스트</h2>
         </div>
     </a>
 </article>
@@ -816,11 +915,10 @@ if (!doNotTrack) {
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#0-목차">0. 목차</a></li>
-    <li><a href="#1-hugo-설치">1. Hugo 설치</a></li>
-    <li><a href="#2-github-레포지토리-생성">2. Github 레포지토리 생성</a></li>
-    <li><a href="#3-hugo-프로젝트-만들기">3. Hugo 프로젝트 만들기</a></li>
-    <li><a href="#4-github-레포지토리-연결">4. github 레포지토리 연결</a></li>
+    <li><a href="#hugo-설치">Hugo 설치</a></li>
+    <li><a href="#github-레포지토리-생성">Github 레포지토리 생성</a></li>
+    <li><a href="#hugo-프로젝트-만들기">Hugo 프로젝트 만들기</a></li>
+    <li><a href="#github-레포지토리-연결">github 레포지토리 연결</a></li>
     <li><a href="#reference">Reference</a></li>
   </ol>
 </nav>
