@@ -61,7 +61,7 @@
 &lt;/div&gt;&lt;h2 id=&#34;포스트에-댓글-추가하기&#34;&gt;포스트에 댓글 추가하기&lt;/h2&gt;
 &lt;p&gt;참고한 &lt;code&gt;gurumee92&lt;/code&gt;님이 하신대로 깃허브에서 &amp;lsquo;blog-comments&amp;rsquo;라는 이름으로 레포지토리를 하나 더 만들고 &lt;a class=&#34;link&#34; href=&#34;https://utteranc.es/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;여기 utterances 사이트&lt;/a&gt;로 가서 &amp;lsquo;Blog Post ↔️ Issue Mapping`에서 한가지를 선택 후 바로 위쪽에 repo 칸에 자신의 레포지토리 이름(JaeKimDev/blog-comments)을 넣어주고 아래쪽에 보여지는 스크립트를 복사하면 된다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://JaeKimdev.github.io/220727-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://JaeKimdev.github.io/image/220727-1.png&#34;
 	
 	
 	
@@ -96,11 +96,11 @@
 &lt;p&gt;어떻게 보면 간단할 수 있는데, md 파일을 수정하면서 어떻게 이미지를 넣어야 할 지 몰라서 고생했다.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;작성하는 글과 같은 폴더 안에 이미지 파일을 넣고 로컬에서 불러오는 방법&lt;/p&gt;
+&lt;p&gt;static 폴더 안에 image 폴더를 만들고(blog/static/image) 로컬에서 불러오는 방법&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;온라인에 올리고 링크를 이용하여 불러오는 방법&lt;/p&gt;
-&lt;p&gt;1번 방법은 blog/content/post/tech 안에 &lt;code&gt;220727-1.md&lt;/code&gt;파일과 &amp;lsquo;220727-1.png&lt;code&gt;파일이 함께 들어있고 글 작성 시 &lt;/code&gt;&lt;img src=&#34;https://JaeKimdev.github.io/220727-1.png&#34;
+&lt;p&gt;1번 방법은 blog/static/image 안에 &amp;lsquo;220727-1.png&lt;code&gt;파일을 추가하고 글 작성 시 &lt;/code&gt;&lt;img src=&#34;https://JaeKimdev.github.io/image/220727-1.png&#34;
 	
 	
 	
@@ -109,7 +109,7 @@
 		alt=&#34;img&#34;
 	
 	
-&gt;` 라고 적어주면 이미지가 자동으로 추가된다.&lt;/p&gt;
+&gt;` 라고 적어주면 이미지가 추가된다.&lt;/p&gt;
 &lt;p&gt;2번 방법은 온라인에 올리고 링크를 이용하여 불러오는 방법이다.&lt;br&gt;
 나는 깃허브 TIL폴더 하단에 &lt;code&gt;etc/images/blog&lt;/code&gt;폴더를 만들어서 이미지를 업로드 하고&lt;br&gt;
 &lt;code&gt;![img](이미지 경로)&lt;/code&gt; 라고 적어주었다.&lt;/p&gt;
