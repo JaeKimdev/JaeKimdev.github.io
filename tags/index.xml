@@ -6,20 +6,36 @@
         <description>Recent content in Tags on Jae&#39;s Devlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 27 Jul 2022 10:46:27 +0800</lastBuildDate><atom:link href="https://JaeKimdev.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>iOS</title>
-        <link>https://JaeKimdev.github.io/tags/ios/</link>
-        <pubDate>Wed, 27 Jul 2022 10:46:27 +0800</pubDate>
+        <lastBuildDate>Thu, 28 Jul 2022 19:28:48 +0800</lastBuildDate><atom:link href="https://JaeKimdev.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Optional</title>
+        <link>https://JaeKimdev.github.io/tags/optional/</link>
+        <pubDate>Thu, 28 Jul 2022 19:28:48 +0800</pubDate>
         
-        <guid>https://JaeKimdev.github.io/tags/ios/</guid>
+        <guid>https://JaeKimdev.github.io/tags/optional/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Optional Binding</title>
+        <link>https://JaeKimdev.github.io/tags/optional-binding/</link>
+        <pubDate>Thu, 28 Jul 2022 19:28:48 +0800</pubDate>
+        
+        <guid>https://JaeKimdev.github.io/tags/optional-binding/</guid>
         <description></description>
         </item>
         <item>
         <title>Swift</title>
         <link>https://JaeKimdev.github.io/tags/swift/</link>
-        <pubDate>Wed, 27 Jul 2022 10:46:27 +0800</pubDate>
+        <pubDate>Thu, 28 Jul 2022 19:28:48 +0800</pubDate>
         
         <guid>https://JaeKimdev.github.io/tags/swift/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>iOS</title>
+        <link>https://JaeKimdev.github.io/tags/ios/</link>
+        <pubDate>Wed, 27 Jul 2022 10:46:27 +0800</pubDate>
+        
+        <guid>https://JaeKimdev.github.io/tags/ios/</guid>
         <description></description>
         </item>
         <item>
