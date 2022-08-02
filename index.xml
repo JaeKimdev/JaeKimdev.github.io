@@ -6,7 +6,48 @@
         <description>Recent content on Jae&#39;s Devlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 01 Aug 2022 08:19:48 +0800</lastBuildDate><atom:link href="https://JaeKimdev.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 02 Aug 2022 09:25:10 +0800</lastBuildDate><atom:link href="https://JaeKimdev.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>hugo 테마 stack으로 변경하기 </title>
+        <link>https://JaeKimdev.github.io/p/hugo-%ED%85%8C%EB%A7%88-stack%EC%9C%BC%EB%A1%9C-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/</link>
+        <pubDate>Tue, 02 Aug 2022 09:25:10 +0800</pubDate>
+        
+        <guid>https://JaeKimdev.github.io/p/hugo-%ED%85%8C%EB%A7%88-stack%EC%9C%BC%EB%A1%9C-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/</guid>
+        <description>&lt;img src="https://cdn.clien.net/web/api/file/F01/8800574/2dab9ea4a96910.jpg?w=780&h=30000" alt="Featured image of post hugo 테마 stack으로 변경하기 " /&gt;&lt;h2 id=&#34;hugo-테마-변경---stack&#34;&gt;hugo 테마 변경 - &lt;code&gt;stack&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Clien에서 &lt;code&gt;hugo&lt;/code&gt; 검색중에 냉동코더님의 기술블로그를 보게 되었다.
+흰색 화면이 뿜어내는 밝은 빛에 눈이 아프던 차에, 하단에 보이는 &lt;code&gt;Dark Mode&lt;/code&gt; 버튼이 어찌나 반갑던지..&lt;/p&gt;
+&lt;p&gt;또 자동으로 우측에 &lt;code&gt;##&lt;/code&gt; 헤더를 인식하여 Table of contents도 만들어준다.&lt;/p&gt;
+&lt;p&gt;그리하여 시작된 테마 변경하기!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://JaeKimdev.github.io/post/tech/220802-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;‼️ 일단 blog 폴더 백업은 필수 !!!&lt;/p&gt;
+&lt;p&gt;여러번의 시행착오 끝에, 그냥 blog 폴더를 날려버리고 다시 처음부터 &lt;a class=&#34;link&#34; href=&#34;https://jaekimdev.github.io/p/hugo%EB%A1%9C-github.io-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B01/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;이전 포스트&lt;/a&gt;를 참고하여 진행했다.&lt;/p&gt;
+&lt;p&gt;서브 모듈을 add 할때 &lt;code&gt;git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/hugo-theme-stack&lt;/code&gt; 이렇게 입력해 주고 stack theme폴더에서 config.yaml을 루트로 이동하여 설정해 주었다.&lt;/p&gt;
+&lt;p&gt;백업해 두었던 content/post 폴더를 복사해서 붙여넣기 해 주면 데이터 이전 완료!&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CaiJimmy/hugo-theme-stack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cliearl.github.io/posts/linux/hugo-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;냉동코더님 블로그&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hoontaeklee.github.io/en/posts/20200215_switch_theme/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;How to switch to another Hugo theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://traceofpassion.github.io/2020/blog-making-02/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;3단계. config.toml 설정하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jinyisland.kr/post/hugo-ga/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GoogleAnalytics 4 휴고 블로그에 적용 시키기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Enum 열거형</title>
         <link>https://JaeKimdev.github.io/p/enum-%EC%97%B4%EA%B1%B0%ED%98%95/</link>
         <pubDate>Mon, 01 Aug 2022 08:19:48 +0800</pubDate>
